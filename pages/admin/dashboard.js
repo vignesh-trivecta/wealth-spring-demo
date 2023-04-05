@@ -19,7 +19,7 @@ function Dashboard() {
               Admin
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/auth/login">Log out</a></li>
+              <li><Link class="dropdown-item" href="/auth/login">Log out</Link></li>
             </ul>
           </div>
         </div>
