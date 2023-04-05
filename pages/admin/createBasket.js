@@ -17,11 +17,11 @@ function CreateBasket() {
           <div class="dropdown">
             <label>Choose Basket/ Create New Basket:&nbsp;</label>
             <select>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-              <option value="4">Option 4</option>
-              <option value="5">Option 5</option>
+              <option value="1">Basket 1</option>
+              <option value="2">Basket 2</option>
+              <option value="3">Basket 3</option>
+              <option value="4">Basket 4</option>
+              <option value="5">Basket 5</option>
               <option value="6">Create New Basket</option>
             </select>
           </div>
