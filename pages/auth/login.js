@@ -6,11 +6,39 @@ import { useRouter } from "next/router";
 function Login() {
 
     const [user, setUser] = useState('');
+    const [password, setPassword] = useState('');
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const router = useRouter();
 
-    function submitLogin() {
-        router.push('../admin/dashboard');
+    // onsubmit function
+    const submitLogin = async (e) => {
+        e.preventDefault();
+        // const res = await fetch('', {
+        //     method: 'POST',
+        //     headers: {
+        //         'content-type': 'application/json',
+        //     },
+        //     body: JSON.stringify({ user, password }),
+        // });
+
+        // const data = await res.json();
+
+
+        // handle login response from server
+        if(true){
+            console.log("User Authorization success!");
+            setIsLoggedIn(!isLoggedIn);
+            sessionStorage.setItem('isLoggedIn', true);
+            router.push('../admin/dashboard');
+        }
+        else {
+            console.log("User doesn't exist");
+            alert("User doesn't exist");    
+            setUser('');
+            setPassword('');
+        }
     }
+    
 
     return(
         <div>
@@ -26,16 +54,16 @@ function Login() {
                 <h1>Admin Login</h1>
 
                 {/* Login Form */}
-                <form>
+                <form onSubmit={submitLogin}>
                     <label>User Name:</label>&nbsp;
-                    <input onChange={(e) => setUser(e.target.value)} type="text" placeholder="Enter your username" name="username" id="username" />
+                    <input onChange={(e) => setUser(e.target.value)} value={user} type="text" placeholder="Enter your username" name="username" id="username" />
                     <br/>
                     <br/>
                     <label>Password:</label>&nbsp;
-                    <input type="password" placeholder="Enter your password" name="password" id="password" />
+                    <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" placeholder="Enter your password" name="password" id="password" />
                     <br/>
                     <br/>
-                    <button className="btn btn-primary" type='button' onClick={submitLogin}>Login</button>
+                    <button className="btn btn-primary" type='submit' onClick={submitLogin}>Login</button>
                 </form>
             </div>
         </div>

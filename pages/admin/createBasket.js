@@ -14,7 +14,7 @@ function CreateBasket() {
             <label>Enter Investment Amount:&nbsp;</label>
             <input type="text" />
           </div>
-          <div class="dropdown">
+          <div className="dropdown">
             <label>Choose Basket/ Create New Basket:&nbsp;</label>
             <select>
               <option value="1">Basket 1</option>
@@ -47,7 +47,7 @@ function CreateBasket() {
               {/* table 1 */}
               <tr>
                 <td>
-                  <div class="dropdown">
+                  <div className="dropdown">
                     <select>
                       <option value="1">Asian Paints Ltd</option>
                       <option value="2">Reliance Industries Ltd</option>
@@ -62,7 +62,7 @@ function CreateBasket() {
                 <td>12.34</td>
                 <td><input type='text' /></td>
                 <td>
-                <div class="dropdown">
+                <div className="dropdown">
                     <select>
                       <option value="1">Buy</option>
                       <option value="2">Sell</option>
@@ -74,7 +74,7 @@ function CreateBasket() {
               {/* table 2 */}
               <tr>
                 <td>
-                  <div class="dropdown">
+                  <div className="dropdown">
                     <select>
                       <option value="1">Asian Paints Ltd</option>
                       <option value="2">Reliance Industries Ltd</option>
@@ -89,7 +89,7 @@ function CreateBasket() {
                 <td>12.34</td>
                 <td><input type='text' /></td>
                 <td>
-                <div class="dropdown">
+                <div className="dropdown">
                     <select>
                       <option value="1">Buy</option>
                       <option value="2">Sell</option>
@@ -101,7 +101,7 @@ function CreateBasket() {
               {/* table 3 */}
               <tr>
                 <td>
-                  <div class="dropdown">
+                  <div className="dropdown">
                     <select>
                       <option value="1">Asian Paints Ltd</option>
                       <option value="2">Reliance Industries Ltd</option>
@@ -116,7 +116,7 @@ function CreateBasket() {
                 <td>12.34</td>
                 <td><input type='text' /></td>
                 <td>
-                <div class="dropdown">
+                <div className="dropdown">
                     <select>
                       <option value="1">Buy</option>
                       <option value="2">Sell</option>
@@ -128,7 +128,7 @@ function CreateBasket() {
               {/* table 3 */}
               <tr>
                 <td>
-                  <div class="dropdown">
+                  <div className="dropdown">
                     <select>
                       <option value="1">Asian Paints Ltd</option>
                       <option value="2">Reliance Industries Ltd</option>
@@ -143,7 +143,7 @@ function CreateBasket() {
                 <td>12.34</td>
                 <td><input type='text' /></td>
                 <td>
-                <div class="dropdown">
+                <div className="dropdown">
                     <select>
                       <option value="1">Buy</option>
                       <option value="2">Sell</option>
@@ -155,7 +155,7 @@ function CreateBasket() {
               {/* table 4 */}
               <tr>
                 <td>
-                  <div class="dropdown">
+                  <div className="dropdown">
                     <select>
                       <option value="1">Asian Paints Ltd</option>
                       <option value="2">Reliance Industries Ltd</option>
@@ -170,7 +170,7 @@ function CreateBasket() {
                 <td>12.34</td>
                 <td><input type='text' /></td>
                 <td>
-                <div class="dropdown">
+                <div className="dropdown">
                     <select>
                       <option value="1">Buy</option>
                       <option value="2">Sell</option>
@@ -182,7 +182,7 @@ function CreateBasket() {
               {/* table 5 */}
               <tr>
                 <td>
-                  <div class="dropdown">
+                  <div className="dropdown">
                     <select>
                       <option value="1">Asian Paints Ltd</option>
                       <option value="2">Reliance Industries Ltd</option>
@@ -197,7 +197,7 @@ function CreateBasket() {
                 <td>12.34</td>
                 <td><input type='text' /></td>
                 <td>
-                <div class="dropdown">
+                <div className="dropdown">
                     <select>
                       <option value="1">Buy</option>
                       <option value="2">Sell</option>
@@ -209,7 +209,7 @@ function CreateBasket() {
               {/* table 6 */}
               <tr>
                 <td>
-                  <div class="dropdown">
+                  <div className="dropdown">
                     <select>
                       <option value="1">Asian Paints Ltd</option>
                       <option value="2">Reliance Industries Ltd</option>
@@ -224,7 +224,7 @@ function CreateBasket() {
                 <td>12.34</td>
                 <td><input type='text' /></td>
                 <td>
-                <div class="dropdown">
+                <div className="dropdown">
                     <select>
                       <option value="1">Buy</option>
                       <option value="2">Sell</option>
