@@ -12,7 +12,17 @@ function Dashboard() {
 
         {/* Dashboard */}
         <div className="text-center">
-            <h1>Overview</h1>
+          <div className="d-flex justify-content-center">
+            <h1 className="flex-fill">Dashboard</h1>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Admin
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/auth/login">Log out</a></li>
+              </ul>
+            </div>
+          </div>
             <p>Total Number of Customer Transaction: 100</p>
             <p>Total Number of Customer Orders Executed: 110</p>
             <p>Total Value of Orders: 200000</p>
