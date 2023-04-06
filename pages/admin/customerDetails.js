@@ -1,9 +1,16 @@
 import Link from "next/link";
+import { userContext } from "../../contexts/useUserContext";
+import { useContext } from "react";
 
 function customerDetails() {
+
+    const [loggedin, setLoggedIn] = useContext(userContext);
+
     return(
-        <div className="container-fluid">
+        loggedin ? (<div className="container">
             <h1>Customer Details</h1>
+
+            {/* Customer Details table */}
             <table className="table">
                 <thead>
                     <tr>
@@ -59,8 +66,11 @@ function customerDetails() {
                     </tr>
                 </tbody>
             </table>
+
             <Link href='./dashboard' className="float-end"><button className="btn btn-primary">Back to Dashboard</button></Link>
-        </div>
+        
+        </div>)
+        : (<div>No authorised Access</div>)
     )
 }
 

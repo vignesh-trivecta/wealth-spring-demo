@@ -1,36 +1,20 @@
 import Link from "next/link";
-import { userContext } from "../../contexts/useUserContext";
-import { useContext } from "react";
+// import { userContext } from "../../contexts/useUserContext";
+// import { useContext } from "react";
 
-function CreateBasket() {
+function UserBasket() {
 
-  const [loggedin, setLoggedIn] = useContext(userContext);
+  // const [loggedin, setLoggedIn] = useContext(userContext);
 
     return (
-      loggedin ?
-      (<div className="container">
-
-        {/* User Basket */}
-        <h1 className="text-center">Create Basket</h1>
+      // loggedin ?
+      // (
+      <div className="container">
 
         {/* Investment row */}
         <h4>Investment</h4>
         <div className="d-flex justify-content-around">
-          <div>
-            <label>Enter Investment Amount:&nbsp;</label>
-            <input type="text" />
-          </div>
-          <div className="dropdown">
-            <label>Choose Basket/ Create New Basket:&nbsp;</label>
-            <select>
-              <option value="1">Basket 1</option>
-              <option value="2">Basket 2</option>
-              <option value="3">Basket 3</option>
-              <option value="4">Basket 4</option>
-              <option value="5">Basket 5</option>
-              <option value="6">Create New Basket</option>
-            </select>
-          </div>
+          <h4>User's Basket</h4>
         </div>
 
         {/* Orders Row */}
@@ -68,12 +52,9 @@ function CreateBasket() {
                 <td>12.34</td>
                 <td><input type='text' /></td>
                 <td>
-                <div className="dropdown">
-                    <select>
-                      <option value="1">Buy</option>
-                      <option value="2">Sell</option>
-                    </select>
-                </div>
+                  <div>
+                    Buy
+                  </div>
                 </td>
               </tr>
 
@@ -95,11 +76,8 @@ function CreateBasket() {
                 <td>12.34</td>
                 <td><input type='text' /></td>
                 <td>
-                <div className="dropdown">
-                    <select>
-                      <option value="1">Buy</option>
-                      <option value="2">Sell</option>
-                    </select>
+                <div>
+                  Sell
                 </div>
                 </td>
               </tr>
@@ -249,16 +227,39 @@ function CreateBasket() {
 
         {/* Buttons */}
         <div className="d-flex justify-content-center align-items-center">
-        <Link href='./saveBasket'>
-          <button className="mx-2 btn btn-success">Save</button>
-        </Link>
-        <button className="mx-2 btn btn-primary">Map to Customer</button>
+          <div>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Check Validity of Advisory
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Alert!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Advisory is still valid
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Link href=''>
+            <button className="mx-2 btn btn-outline-success">Confirm</button>
+          </Link>
         </div>
         
-        <Link href='./dashboard' className="float-end"><button className="btn btn-outline-primary">Back to Dashboard</button></Link>
-      </div>)
-      : (<div>No authorised Access</div>)
+
+
+      </div>
+    //   )
+    //   : (<div>No authorised Access</div>)
     );
 }
 
-export default CreateBasket;
+export default UserBasket;

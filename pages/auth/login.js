@@ -1,18 +1,21 @@
 import Link from "next/link";
 import Head from "next/head";
-import { useState, } from "react";
+import { useContext, useState, } from "react";
 import { useRouter } from "next/router";
+import { userContext } from "../../contexts/useUserContext";
 
-function Login() {
+function LoginAuth() {
 
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const router = useRouter();
 
-    // onsubmit function
-    const submitLogin = async (e) => {
-        e.preventDefault();
+    const [loggedin, setLoggedIn] = useContext(userContext);
+
+
+    // onsubmit function - default version
+    // const submitLogin = async (e) => {
+    //     e.preventDefault();
         // const res = await fetch('', {
         //     method: 'POST',
         //     headers: {
@@ -25,19 +28,36 @@ function Login() {
 
 
         // handle login response from server
-        if(true){
-            console.log("User Authorization success!");
-            setIsLoggedIn(!isLoggedIn);
-            sessionStorage.setItem('isLoggedIn', true);
-            router.push('../admin/dashboard');
-        }
-        else {
-            console.log("User doesn't exist");
-            alert("User doesn't exist");    
-            setUser('');
-            setPassword('');
-        }
-    }
+        // if(true){
+        //     console.log("User Authorization success!");
+        //     setIsLoggedIn(!isLoggedIn);
+        //     sessionStorage.setItem('isLoggedIn', true);
+        //     router.push('../admin/dashboard');
+        // }
+        // else {
+        //     console.log("User doesn't exist");
+        //     alert("User doesn't exist");    
+        //     setUser('');
+        //     setPassword('');
+        // }
+    // }
+
+    // onsubmit function - using useContext hook
+    const submitLogin = (e) => {
+        e.preventDefault();
+        // const res = await fetch('', {
+        //     method: 'POST',
+        //     headers: {
+        //         'content-type': 'application/json',
+        //     },
+        //     body: JSON.stringify({ user, password }),
+        // });
+
+        // const data = await res.json();
+        setLoggedIn(!loggedin);
+        router.push('../admin/dashboard');
+    };
+
     
 
     return(
@@ -70,4 +90,4 @@ function Login() {
     )
 }
 
-export default Login;
+export default LoginAuth;
