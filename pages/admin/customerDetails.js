@@ -2,7 +2,7 @@ import Link from "next/link";
 import { userContext } from "../../contexts/useUserContext";
 import { useContext } from "react";
 
-function customerDetails() {
+function CustomerDetails() {
 
     const [loggedin, setLoggedIn] = useContext(userContext);
 
@@ -74,4 +74,4 @@ function customerDetails() {
     )
 }
 
-export default customerDetails;
+export default CustomerDetails;

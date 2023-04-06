@@ -14,7 +14,7 @@ function UserBasket() {
         {/* Investment row */}
         <h4>Investment</h4>
         <div className="d-flex justify-content-around">
-          <h4>User's Basket</h4>
+          <h4>Users Basket</h4>
         </div>
 
         {/* Orders Row */}

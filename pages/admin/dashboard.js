@@ -67,7 +67,7 @@ function Dashboard() {
                 <button className="btn btn-success">Create a Basket</button>
             </Link>
             &nbsp;
-            <Link href='./customerDetails'>
+            <Link href='./CustomerDetails'>
               <button className="btn btn-primary">Map Basket to Customer</button>
             </Link>
           </div>
