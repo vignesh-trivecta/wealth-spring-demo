@@ -249,7 +249,7 @@ function UserBasket() {
               </div>
             </div>
           </div>
-          <Link href=''>
+          <Link href='./orderStatus'>
             <button className="mx-2 btn btn-outline-success">Confirm</button>
           </Link>
         </div>
