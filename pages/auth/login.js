@@ -43,29 +43,37 @@ function LoginAuth() {
     // }
 
     // onsubmit function - using useContext hook
-    const submitLogin = async (e) => {
+    const submitLogin = (e) => {
         e.preventDefault();
         console.log({user, password});
-        const res = await fetch("/adminlogin", {
+        fetch("/adminlogin", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({ username, password }),
-          });
-      
-          if (res.status === 200) {
+        })
+        .then(response => {
+            if (response.status === 200) {
             // authentication successful
             // redirect user to dashboard or home page
+            console.log(response.status);
+            console.log(response.text());
             setLoggedIn(!loggedin);
             router.push('../admin/dashboard');
-          } 
-          else {
+            } 
+            else {
             // authentication failed
             // display error message to user
             alert("Invalid credentials");
-          }
-
+            }
+        })
+        .then(data => {
+            console.log(data); // "true"
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
     };
 
     
