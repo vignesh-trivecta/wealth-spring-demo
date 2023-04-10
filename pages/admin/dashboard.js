@@ -74,8 +74,12 @@ function Dashboard() {
 
       </div>
     </div>)
-    : (<div>No authorised Access</div>)
+    : (<div className="d-flex row container m-5">
+        <p>No authorized Access</p>
+        <p>Please <Link href='../auth/login'>login</Link></p>
+      </div>
+    )
   );
-}
+};
 
 export default Dashboard;

@@ -1,25 +1,41 @@
 import Link from "next/link";
 import Head from "next/head";
 import jwt  from "jsonwebtoken";
+import CryptoJS from "crypto-js";
 import { useContext, useState, } from "react";
 import { useRouter } from "next/router";
 import { userContext } from "../../contexts/useUserContext";
 
 function LoginAuth() {
 
+    // declaring state variables
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
+    
     const router = useRouter();
 
     const [loggedin, setLoggedIn] = useContext(userContext);
 
-    // onsubmit function - using useContext hook
+    // function to encrypt the username and password using CryptoJS
+    function encryptedCredentials(user, password, SECRET_KEY) {
+        const encryptedUser = CryptoJS.AES.encrypt(user, SECRET_KEY).toString();
+        const encryptedPassword = CryptoJS.AES.encrypt(user, SECRET_KEY).toString();    
+        return (encryptedUser, encryptedPassword)
+    }
+
+    // onsubmit function 
     const submitLogin = (e) => {
         e.preventDefault();
         
-        const token = jwt.sign({user, password}, process.env.SECRET_KEY);
+        // signing the username, password with secret key
+        // using jwt to create a authentication token
+        encryptedCredentials(user, password, process.env.SECRET_KEY);
+        const token = jwt.sign({encryptedCredentials}, process.env.SECRET_KEY);
         console.log(token);
-
+        
+        // posting the authorized token to backend,
+        // based on the received respone 200 or 404 
+        // redirecting user to next page
         fetch("http://localhost:8082/adminlogin", {
             method: "POST",
             headers: {
@@ -33,7 +49,6 @@ function LoginAuth() {
             // redirect user to dashboard or home page
 
             // console.log(response.status);
-            // console.log(response.text());
             setLoggedIn(!loggedin);
             router.push('../admin/dashboard');
             } 
@@ -42,12 +57,8 @@ function LoginAuth() {
             // display error message to user
 
             // console.log(response.status);
-            // console.log(response.text());
             alert("Invalid credentials");
             }
-        })
-        .then(data => {
-            console.log(data); 
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
@@ -79,7 +90,7 @@ function LoginAuth() {
                     <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" placeholder="Enter your password" name="password" id="password" />
                     <br/>
                     <br/>
-                    <button className="btn btn-primary" type='submit' onClick={submitLogin}>Login</button>
+                    <button className="btn btn-primary" type='submit'>Login</button>
                 </form>
             </div>
         </div>

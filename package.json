@@ -11,9 +11,8 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "crypto-js": "^4.1.1",
     "dotenv": "^16.0.3",
-    "eslint": "^8.37.0",
-    "eslint-config-next": "^13.2.4",
     "jsonwebtoken": "^8.5.1",
     "next": "^13.2.4",
     "react": "^18.2.0",

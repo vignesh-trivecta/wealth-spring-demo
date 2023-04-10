@@ -11,7 +11,7 @@ function App({ Component, pageProps }) {
 
   return (
     <UserContext>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </UserContext>
   );
 }

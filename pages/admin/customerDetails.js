@@ -70,8 +70,12 @@ function CustomerDetails() {
             <Link href='./dashboard' className="float-end"><button className="btn btn-primary">Back to Dashboard</button></Link>
         
         </div>)
-        : (<div>No authorised Access</div>)
-    )
-}
+        : (<div className="d-flex row container m-5">
+            <p>No authorized Access</p>
+            <p>Please <Link href='../auth/login'>login</Link></p>
+          </div>
+        )
+    );
+};
 
 export default CustomerDetails;
