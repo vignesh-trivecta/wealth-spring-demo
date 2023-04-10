@@ -2,6 +2,7 @@ import Link from "next/link";
 
 function userLogin() {
     return(
+        // OTP based login page
         <div className="container text-center my-5">
             <div>
                 <label>Enter OTP: &nbsp;</label>

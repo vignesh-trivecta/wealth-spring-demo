@@ -2,6 +2,7 @@ import Link from "next/link";
 
 function OrderProcessing() {
     return(
+        // Order processing page
         <div className="container d-flex flex-column justify-content-center align-items-center mt-5">
             <div>
                 <span>Order Processing... &nbsp;</span>
