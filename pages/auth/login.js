@@ -14,13 +14,13 @@ function LoginAuth() {
     
     const router = useRouter();
 
-    const [loggedin, setLoggedIn] = useContext(userContext);
+    const [loggedIn, setLoggedIn] = useContext(userContext);
 
     // function to encrypt the username and password using CryptoJS
     function encryptedCredentials(user, password, SECRET_KEY) {
         const encryptedUser = CryptoJS.AES.encrypt(user, SECRET_KEY).toString();
-        const encryptedPassword = CryptoJS.AES.encrypt(user, SECRET_KEY).toString();    
-        return (encryptedUser, encryptedPassword)
+        const encryptedPassword = CryptoJS.AES.encrypt(password, SECRET_KEY).toString();    
+        return {encryptedUser, encryptedPassword};
     }
 
     // onsubmit function 
@@ -29,9 +29,13 @@ function LoginAuth() {
         
         // signing the username, password with secret key
         // using jwt to create a authentication token
-        encryptedCredentials(user, password, process.env.SECRET_KEY);
-        const token = jwt.sign({encryptedCredentials}, process.env.SECRET_KEY);
+        const { encryptedUser, encryptedPassword } = encryptedCredentials(user, password, process.env.SECRET_KEY);
+        console.log(encryptedUser, encryptedPassword)
+        const token = jwt.sign({encryptedUser, encryptedPassword}, process.env.SECRET_KEY);
         console.log(token);
+        // setLoggedIn(!loggedIn);
+        // localStorage.setItem('loggedIn', true);
+        // router.push('../admin/dashboard');
         
         // posting the authorized token to backend,
         // based on the received respone 200 or 404 
@@ -41,7 +45,7 @@ function LoginAuth() {
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ token }),
+            body: token,
         })
         .then(response => {
             if (response.status === 200) {
