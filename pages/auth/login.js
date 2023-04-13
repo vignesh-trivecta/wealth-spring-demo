@@ -34,7 +34,7 @@ function LoginAuth() {
         // using jwt to create a authentication token
         // const { encryptedUser, encryptedPassword } = encryptedCredentials(user, password, process.env.SECRET_KEY);
         const token = jwt.sign({user, password}, process.env.SECRET_KEY);
-        setLoggedIn(true);
+        setLoggedIn(!loggedIn);
         // localStorage.setItem('loggedIn', true);
         router.push('../admin/dashboard');
         
