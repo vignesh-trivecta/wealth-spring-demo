@@ -12,7 +12,8 @@ function Dashboard() {
 
   // logout functionality
   const logOut = () => {
-    localStorage.setItem('loggedIn', false);
+    // localStorage.setItem('loggedIn', false);
+    setLoggedIn(!loggedIn);
     router.push('/auth/login');
   }
 
