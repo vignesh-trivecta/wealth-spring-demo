@@ -7,18 +7,18 @@ import Clock from 'react-live-clock';
 
 function Dashboard() {
 
+  const [loggedIn, setLoggedIn] = useContext(userContext);
   const router = useRouter();
-  const [loggedin, setLoggedIn] = useContext(userContext);
 
   // logout functionality
   const logOut = () => {
-    // sessionStorage.removeItem('isLoggedIn');
-    setLoggedIn(!loggedin);
+    localStorage.setItem('loggedIn', false);
     router.push('/auth/login');
   }
 
   return (
-    loggedin ?
+    (loggedIn)  
+    ?
     (<div className="container">
       {/* Page Name */}
       <Head>
