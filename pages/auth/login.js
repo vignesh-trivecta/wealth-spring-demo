@@ -3,7 +3,7 @@ import Head from "next/head";
 import jwt  from "jsonwebtoken";
 // import CryptoJS from "crypto-js";
 import React from "react";
-import { useContext, useState, } from "react";
+import { useContext, useState,  } from "react";
 import { useRouter } from "next/router";
 import { userContext } from "../../contexts/useUserContext";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -85,10 +85,10 @@ function LoginAuth() {
         }
         // Else reCAPTCHA was executed successfully so proceed with the 
         // alert
-        alert(`Hey, ${email}`);
+        // alert(`Hey, ${email}`);
         // Reset the reCAPTCHA so that it can be executed again if user 
         // submits another email.
-        recaptchaRef.current.reset();
+        // recaptchaRef.current.reset();
       }
 
     return(
