@@ -18,7 +18,8 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
-    "react-live-clock": "^6.1.13"
+    "react-live-clock": "^6.1.13",
+    "react-google-recaptcha": "^2.1.0",
   },
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
   "main": "next.config.js",
