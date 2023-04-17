@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { userContext } from "../../contexts/useUserContext";
-import { useContext } from "react";
+import { useSelector } from "react-redux";
 
 function CustomerDetails() {
 
-    const [loggedin, setLoggedIn] = useContext(userContext);
+    const loggedIn = useSelector((state) => state.auth.loggedIn);
 
     return(
-        loggedin ? (<div className="container">
+        loggedIn ? (<div className="container">
             <h1>Customer Details</h1>
 
             {/* Customer Details table */}

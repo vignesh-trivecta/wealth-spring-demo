@@ -1,12 +1,11 @@
 import { useRouter } from 'next/router';
-import { userContext } from "../../contexts/useUserContext";
-import { useContext } from 'react';
+import { useSelector } from "react-redux";
 import Link from 'next/link';
 
 function SaveBasket(){
     
   const router = useRouter();
-  const [loggedin, setLoggedIn] = useContext(userContext);
+  const loggedIn = useSelector((state) => state.auth.loggedIn);
 
   const handleClick = () => {
     alert('Basket created successfully!');
@@ -14,7 +13,7 @@ function SaveBasket(){
     };
 
   return (
-    loggedin ?
+    loggedIn ?
     (<div className="container my-4">
       <div>
         <label>Enter the name for Basket: &nbsp;</label>

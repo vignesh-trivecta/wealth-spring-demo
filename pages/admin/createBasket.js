@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { userContext } from "../../contexts/useUserContext";
-import { useContext } from "react";
+import { useSelector } from "react-redux";
 
 function CreateBasket() {
 
-  const [loggedin, setLoggedIn] = useContext(userContext);
+  const loggedIn = useSelector((state) => state.auth.loggedIn);
 
   return (
-    loggedin 
+    loggedIn 
     ? (<div className="container">
 
       {/* User Basket */}
