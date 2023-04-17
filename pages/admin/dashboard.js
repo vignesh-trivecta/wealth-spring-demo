@@ -1,19 +1,20 @@
 import Head from "next/head";
 import Link from "next/link";
 import {useRouter} from "next/router";
-import { useContext } from "react";
-import { userContext } from "../../contexts/useUserContext";
+import { setLoggedIn } from "@/store/authSlice";
+import { useDispatch, useSelector } from "react-redux";
 import Clock from 'react-live-clock';
 
 function Dashboard() {
 
-  const [loggedIn, setLoggedIn] = useContext(userContext);
+  const loggedIn = useSelector((state) => state.auth.loggedIn);
   const router = useRouter();
+  const dispatch = useDispatch();
 
   // logout functionality
   const logOut = () => {
-    // localStorage.setItem('loggedIn', false);
-    setLoggedIn(!loggedIn);
+    localStorage.setItem('loggedIn', false);
+    dispatch(setLoggedIn(false));
     router.push('/auth/login');
   }
 
