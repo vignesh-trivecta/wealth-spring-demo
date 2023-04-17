@@ -118,8 +118,8 @@ function LoginAuth() {
                     </div>
                     <div className="d-flex justify-content-center">
                         <ReCAPTCHA
-                            ref={recaptchaRef}
-                            size="visible"
+                            ref={ReCAPTCHA}
+                            size="normal"
                             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                         onChange={onReCAPTCHAChange}
                         />
