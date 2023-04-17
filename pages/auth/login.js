@@ -1,22 +1,23 @@
+import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import jwt  from "jsonwebtoken";
 // import CryptoJS from "crypto-js";
-import React from "react";
-import { useContext, useState,  } from "react";
-import { useRouter } from "next/router";
-import { userContext } from "../../contexts/useUserContext";
+import { useState } from "react";
+import { setLoggedIn } from "@/store/authSlice";
+import { useDispatch } from "react-redux";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useRouter } from "next/router";
 
 function LoginAuth() {
 
     // declaring state variables
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
-    const [loggedIn, setLoggedIn] = useContext(userContext);
-    
-    const recaptchaRef = React.createRef();
+
     const router = useRouter();
+    const dispatch = useDispatch();
+  
     // const iv = CryptoJS.enc.Hex.parse("26463b878c7e8239e01aa17b21d8228e");
 
     // function to encrypt the username and password using CryptoJS
@@ -34,10 +35,10 @@ function LoginAuth() {
         // using jwt to create a authentication token
         // const { encryptedUser, encryptedPassword } = encryptedCredentials(user, password, process.env.SECRET_KEY);
         const token = jwt.sign({user, password}, process.env.SECRET_KEY);
-        setLoggedIn(!loggedIn);
-        // localStorage.setItem('loggedIn', true);
+        localStorage.setItem('loggedIn', true);
+        dispatch(setLoggedIn(true));
         router.push('../admin/dashboard');
-        
+
         // posting the authorized token to backend,
         // based on the received respone 200 or 404 
         // redirecting user to next page
@@ -55,7 +56,8 @@ function LoginAuth() {
             // redirect user to dashboard or home page
 
             // console.log(response.status);
-            setLoggedIn(true);
+            localStorage.setItem('loggedIn', true);
+            dispatch(setLoggedIn(true));
             router.push('../admin/dashboard');
             } 
             else {
