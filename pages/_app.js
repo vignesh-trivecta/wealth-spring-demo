@@ -1,6 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.css'; 
 import '@/styles/globals.css';
-import UserContext from '@/contexts/useUserContext';
+// import UserContext from '@/contexts/useUserContext';
+import { Provider } from 'react-redux';
+import store from '../store/store';
+import { persistor } from '../store/store';
+import { PersistGate } from "redux-persist/integration/react";
 
 import { useEffect } from 'react';
 
@@ -10,9 +14,13 @@ function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <UserContext>
-      <Component {...pageProps} />
-    </UserContext>
+    // <UserContext>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+        <Component {...pageProps} />
+        </PersistGate>
+      </Provider>
+    // </UserContext> 
   );
 }
 
