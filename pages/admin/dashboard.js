@@ -4,24 +4,39 @@ import {useRouter} from "next/router";
 import { setLoggedIn } from "@/store/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Clock from 'react-live-clock';
+import { setPassword, setUser } from "@/store/userSlice";
+import { useEffect } from "react";
+import { setData } from "@/store/dataSlice";
 
-function Dashboard() {
+const Dashboard = () => {
 
   const loggedIn = useSelector((state) => state.auth.loggedIn);
+  // const data = useSelector((state) => state.data.data);
   const router = useRouter();
   const dispatch = useDispatch();
+
+  useEffect(()=> {
+    async function getData () {
+      const response = await fetch("/api/user");
+      const data = await response.json();
+      setData(data);
+    }
+    getData();
+  })
 
   // logout functionality
   const logOut = () => {
     router.push('/auth/login');
     dispatch(setLoggedIn(false));
+    dispatch(setUser(''));
+    dispatch(setPassword(''));
     localStorage.setItem('loggedIn', false);
   }
 
   return (
     (loggedIn)  
     ?
-    (<div className="container">
+    (<div className="container p-5">
       {/* Page Name */}
       <Head>
         <title>Wealth Spring | Admin Dashboard</title>
@@ -31,9 +46,9 @@ function Dashboard() {
       {/* Dashboard */}
       <div className="">
         <div className="d-flex justify-content-between">
-          <h1 className="">Overview</h1>
+          <h1 className="">Dashboard Overview</h1>
           <div className="d-flex justify-content-between">
-            <div>
+            <div className="fs-5">
               <p>Date: {new Date().toLocaleDateString()}</p>
               <p>Time: <Clock format={'h:mm a'} ticking={true} timezone={'Asia/Calcutta'} /></p>
             </div>
@@ -47,9 +62,9 @@ function Dashboard() {
             </div>
           </div>
         </div>
-
+        <div className="p-5">
           <table className="table-borderless mx-auto">
-            <tbody>
+            <tbody className="fs-3">
               <tr>
                 <td>Total Number of Customer Transaction</td>
                 <td className="border border-dark p-2">100</td>
@@ -66,14 +81,14 @@ function Dashboard() {
           </table>
           <div className="m-5 d-flex justify-content-center">
             <Link href='./createBasket'>
-                <button className="btn btn-success">Create a Basket</button>
+                <button className="btn btn-success btn-lg m-2">Create a Basket</button>
             </Link>
             &nbsp;
             <Link href='./customerDetails'>
-              <button className="btn btn-primary">Map Basket to Customer</button>
+              <button className="btn btn-primary btn-lg m-2">Map Basket to Customer</button>
             </Link>
           </div>
-
+        </div>
       </div>
     </div>)
     : (<div className="d-flex row container m-5">

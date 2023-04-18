@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { useSelector } from "react-redux";
 import Link from 'next/link';
 
-function SaveBasket(){
+const SaveBasket = () => {
     
   const router = useRouter();
   const loggedIn = useSelector((state) => state.auth.loggedIn);

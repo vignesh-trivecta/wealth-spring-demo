@@ -1,5 +1,5 @@
 
-function OrderSuccess() {
+const OrderSuccess = () => {
     return(
         // order success page
         <div className="container d-flex flex-column align-items-center mt-5">

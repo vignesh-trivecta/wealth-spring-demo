@@ -11,8 +11,10 @@ export default function Home() {
       </Head>
       
       {/* Welcome Page */}
-      <h1 className='text-center'>Welcome to Wealth Spring!</h1>
-      <p  className='text-center'><Link href='./auth/login'>Click Here to Login</Link></p>
+      <div className='m-5'>
+        <h1 className='text-center'>Welcome to Wealth Spring!</h1>
+        <p  className='text-center mt-5'><Link href='./auth/login'>Click Here to Login</Link></p>
+      </div>
     </div>
   )
 }

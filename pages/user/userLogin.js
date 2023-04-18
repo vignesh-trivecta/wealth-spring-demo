@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function userLogin() {
+const userLogin = () => {
     return(
         // OTP based login page
         <div className="container text-center my-5">

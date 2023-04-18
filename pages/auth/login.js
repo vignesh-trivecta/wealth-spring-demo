@@ -3,17 +3,18 @@ import Link from "next/link";
 import Head from "next/head";
 import jwt  from "jsonwebtoken";
 // import CryptoJS from "crypto-js";
-import { useState } from "react";
 import { setLoggedIn } from "@/store/authSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRouter } from "next/router";
+import { setPassword, setUser } from "@/store/userSlice";
 
-function LoginAuth() {
+
+const LoginAuth = () => {
 
     // declaring state variables
-    const [user, setUser] = useState('');
-    const [password, setPassword] = useState('');
+    const user = useSelector((state) => state.user.user);
+    const password = useSelector((state) => state.user.password);
 
     const router = useRouter();
     const dispatch = useDispatch();
@@ -75,8 +76,8 @@ function LoginAuth() {
 
     function resetInput(e) {
         e.preventDefault();
-        setUser('');
-        setPassword('');
+        dispatch(setUser(''));
+        dispatch(setPassword(''));
     }
 
     const onReCAPTCHAChange = (captchaCode) => {
@@ -93,46 +94,81 @@ function LoginAuth() {
         // recaptchaRef.current.reset();
       }
 
-    return(
-        <div>
-            {/* Page Name */}
-            <Head>
-                <title>Wealth Spring | Admin Login</title>
-                <meta property="og:title" content="Wealth Spring | Admin Login" key="title" />
-            </Head>
+    return (
+      <div className="container">
+        {/* Page Name */}
+        <Head>
+          <title>Wealth Spring | Admin Login</title>
+          <meta
+            property="og:title"
+            content="Wealth Spring | Admin Login"
+            key="title"
+          />
+        </Head>
 
-            {/* Login page */}
-            <p><Link href='/'>Home</Link></p>
-            <div className="text-center">
-                <h1>Admin Login</h1>
+        <p>
+          <Link href="/">{`<Home`}</Link>
+        </p>
 
-                {/* Login Form */}
-                <form>
-                    <div className="mt-2">
-                        <label>User Name:</label>&nbsp;
-                        <input onChange={(e) => setUser(e.target.value)} value={user} type="text" placeholder="Enter your username" name="username" id="username" />
-                    </div>
-                    <div className="my-4">
-                        <label>Password:</label>&nbsp;
-                        <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" placeholder="Enter your password" name="password" id="password" />
-                    </div>
-                    <div className="d-flex justify-content-center">
-                        <ReCAPTCHA
-                            ref={ReCAPTCHA}
-                            size="normal"
-                            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                        onChange={onReCAPTCHAChange}
-                        />
-                    </div>
-                    <a href="#">Forgot your password?</a>
-                    <div className="d-flex justify-content-center mt-2">
-                        <button className="btn btn-outline-danger m-1" type='submit' onClick={resetInput}>Reset</button>
-                        <button className="btn btn-primary m-1" type='submit' onClick={submitLogin}>Login</button>
-                    </div>  
-                </form>
+        {/* Login page */}
+        <div className="d-flex justify-content-center align-items-center">
+        <form className="border border-dark rounded p-5 w-50">
+          <h2 className="text-center fw-bold">Admin Login</h2>
+          <div className="mb-3">
+            <label for="exampleInputEmail1" className="form-label fs-4 fw-semibold">
+              Username
+            </label>
+            <input
+              type="text"
+              onChange={(e) => dispatch(setUser(e.target.value))}
+              value={user}
+              className="form-control border border-dark"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              sx={{width: '50px'}}
+            />
+          </div>
+          <div className="mb-3">
+            <label for="exampleInputPassword1" className="form-label fs-4 fw-semibold">
+              Password
+            </label>
+            <input
+              type="password"
+              onChange={(e) => dispatch(setPassword(e.target.value))}
+              value={password}
+              className="form-control border border-dark"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div className="d-flex">
+              <ReCAPTCHA
+                ref={ReCAPTCHA}
+                size="normal"
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                onChange={onReCAPTCHAChange}
+              />
             </div>
+            <a href="#">Forgot your password?</a>
+            <div className="row">
+              <button
+                className="col btn btn-primary btn-lg m-4"
+                type="submit"
+                onClick={submitLogin}
+              >
+                Login
+              </button>
+              <button
+                className="col btn btn-outline-danger btn-lg m-4"
+                type="submit"
+                onClick={resetInput}
+              >
+                Reset
+              </button>
+            </div>
+        </form>
         </div>
-    )
+      </div>
+    );
 }
 
 export default LoginAuth;

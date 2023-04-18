@@ -2,7 +2,7 @@ import Link from "next/link";
 // import { userContext } from "../../contexts/useUserContext";
 // import { useContext } from "react";
 
-function UserBasket() {
+const UserBasket = () => {
 
   // const [loggedin, setLoggedIn] = useContext(userContext);
 
