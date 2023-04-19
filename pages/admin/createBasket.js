@@ -1,9 +1,12 @@
+import { setSelectedBasket } from "@/store/basketSlice";
 import Link from "next/link";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 const CreateBasket = () => {
 
   const loggedIn = useSelector((state) => state.auth.loggedIn);
+  const selectedBasket = useSelector((state) => state.basket.selectedBasket);
+  const dispatch = useDispatch();
 
   return (
     loggedIn 
@@ -24,11 +27,11 @@ const CreateBasket = () => {
         <div className="d-none d-lg-inline ms-5">&nbsp;</div>
         <div className="input-group input-group-default w-50 ms-5">
           <label className="input-group-text" for="inputGroupSelect01">Choose /Create Basket</label>
-          <select className="form-select" id="inputGroupSelect01">
+          <select className="form-select" id="inputGroupSelect01" onChange={(e) => {dispatch(setSelectedBasket(e.target.value))}}>
             <option value="1">Basket 1</option>
             <option value="2">Basket 2</option>
             <option value="3">Basket 3</option>
-            <option value="3">New Basket</option>
+            <option value="new">New Basket</option>
           </select>
         </div>
       </div>

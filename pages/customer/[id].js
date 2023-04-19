@@ -7,7 +7,7 @@ const Basket = () => {
   const loggedIn = useSelector((state) => state.auth.loggedIn);
   const router = useRouter();
   const { id } = router.query;
-
+  const selectedBasket = useSelector((state) => state.basket.selectedBasket)
 
   return (
     loggedIn 
@@ -27,8 +27,8 @@ const Basket = () => {
         <div className="d-none d-lg-inline ms-5 me-5">&nbsp;</div>
         <div className="d-none d-lg-inline ms-5">&nbsp;</div>
         <div className="input-group input-group-default w-25 ms-5">
-        <span className="input-group-text" id="inputGroup-sizing-default">Selected Basket Name</span>
-          <input type="text" value={id} className="form-control bg-light" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" disabled readonly />
+        <span className="input-group-text" id="inputGroup-sizing-default">Selected Basket</span>
+          <input type="text" value={`Basket ${selectedBasket}`} className="form-control bg-light" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" disabled readonly />
         </div>
       </div>
 
