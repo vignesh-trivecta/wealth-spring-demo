@@ -17,23 +17,18 @@ const Basket = () => {
       <h3 className="text-center m-3 fw-bold">{id}'s Basket</h3>
 
       {/* Investment row */}
-      <h4 className="">Investment</h4>
+      <h4>Investment</h4>
       <div className="d-flex justify-content-between mb-5">
-        <div className="input-group w-50 me-5">
-          <span className="input-group-text" id="inputGroup-sizing-default">Enter Investment Amount</span>
-          <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
+        <div className="input-group w-25 me-5">
+          <span className="input-group-text" id="inputGroup-sizing-default">Investment Amount</span>
+          <input type="text" value="3,00,000" className="form-control bg-light" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" disabled readonly />
         </div>
         <div className="d-none d-xl-inline ms-5 me-5">&nbsp;</div>
         <div className="d-none d-lg-inline ms-5 me-5">&nbsp;</div>
         <div className="d-none d-lg-inline ms-5">&nbsp;</div>
-        <div className="input-group input-group-default w-50 ms-5">
-          <label className="input-group-text" for="inputGroupSelect01">Choose /Create Basket</label>
-          <select className="form-select" id="inputGroupSelect01">
-            <option value="1">Basket 1</option>
-            <option value="2">Basket 2</option>
-            <option value="3">Basket 3</option>
-            <option value="3">New Basket</option>
-          </select>
+        <div className="input-group input-group-default w-25 ms-5">
+        <span className="input-group-text" id="inputGroup-sizing-default">Selected Basket Name</span>
+          <input type="text" value={id} className="form-control bg-light" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" disabled readonly />
         </div>
       </div>
 
@@ -59,29 +54,15 @@ const Basket = () => {
             <tr>
               <th scope="row">1</th>
               <td>
-                <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Asian Paints Ltd</option>
-                    <option value="2">Reliance Industries Ltd</option>
-                    <option value="3">La Opala RG Ltd</option>
-                    <option value="4">Reddington India Ltd</option>
-                  </select>
-                </div>
+                Asian Paints Ltd
               </td>
               <td>2828.40</td>
               <td>12.34</td>
-              <td className="">
-                <div>
-                <input type="text" className="form-control w-25" />  
-                </div>
+              <td>
+                30
               </td>
               <td>
-              <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Buy</option>
-                    <option value="2">Sell</option>
-                  </select>
-              </div>
+                Buy
               </td>
             </tr>
 
@@ -89,29 +70,15 @@ const Basket = () => {
             <tr>
             <th scope="row">2</th>
               <td>
-                <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Asian Paints Ltd</option>
-                    <option selected value="2">Reliance Industries Ltd</option>
-                    <option value="3">La Opala RG Ltd</option>
-                    <option value="4">Reddington India Ltd</option>
-                  </select>
-                </div>
+                Reliance Industries Ltd
               </td>
               <td>2356.35</td>
               <td>6.80</td>
-              <td className="">
-                <div>
-                <input type="text" className="form-control w-25" />  
-                </div>
+              <td>
+                50
               </td>
               <td>
-              <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Buy</option>
-                    <option selected value="2">Sell</option>
-                  </select>
-              </div>
+                Sell
               </td>
             </tr>
 
@@ -119,29 +86,15 @@ const Basket = () => {
             <tr>
             <th scope="row">3</th>
               <td>
-                <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Asian Paints Ltd</option>
-                    <option value="2">Reliance Industries Ltd</option>
-                    <option selected value="3">La Opala RG Ltd</option>
-                    <option value="4">Reddington India Ltd</option>
-                  </select>
-                </div>
+                La Opala RG Ltd
               </td>
               <td>365.20</td>
               <td>32.7</td>
-              <td className="">
-                <div>
-                <input type="text" className="form-control w-25" />  
-                </div>
+              <td>
+                20
               </td>
               <td>
-              <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Buy</option>
-                    <option value="2">Sell</option>
-                  </select>
-              </div>
+                Buy
               </td>
             </tr>
 
@@ -149,29 +102,15 @@ const Basket = () => {
             <tr>
             <th scope="row">4</th>
               <td>
-                <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Asian Paints Ltd</option>
-                    <option value="2">Reliance Industries Ltd</option>
-                    <option value="3">La Opala RG Ltd</option>
-                    <option selected value="4">Reddington India Ltd</option>
-                  </select>
-                </div>
+                Reddington India Ltd
               </td>
               <td>170.00</td>
               <td>32.7</td>
-              <td className="">
-                <div>
-                <input type="text" className="form-control w-25" />  
-                </div>
+              <td>
+                100
               </td>
               <td>
-              <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Buy</option>
-                    <option value="2">Sell</option>
-                  </select>
-              </div>
+                Buy
               </td>
             </tr>
 
@@ -179,30 +118,15 @@ const Basket = () => {
             <tr>
             <th scope="row">5</th>
               <td>
-                <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Asian Paints Ltd</option>
-                    <option value="2">Reliance Industries Ltd</option>
-                    <option value="3">La Opala RG Ltd</option>
-                    <option value="4">Reddington India Ltd</option>
-                    <option selected value="5">Indigo Paints</option>
-                  </select>
-                </div>
+                Indigo Paints
               </td>
               <td>1072.85</td>
               <td>7.51</td>
-              <td className="">
-                <div>
-                <input type="text" className="form-control w-25" />  
-                </div>
+              <td>
+                25
               </td>
               <td>
-              <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Buy</option>
-                    <option selected value="2">Sell</option>
-                  </select>
-              </div>
+                Sell
               </td>
             </tr>
 
@@ -210,31 +134,15 @@ const Basket = () => {
             <tr>
             <th scope="row">6</th>
               <td>
-                <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Asian Paints Ltd</option>
-                    <option value="2">Reliance Industries Ltd</option>
-                    <option value="3">La Opala RG Ltd</option>
-                    <option value="4">Reddington India Ltd</option>
-                    <option value="5">Indigo Paints</option>
-                    <option selected value="6">Akzo Nobel</option>
-                  </select>
-                </div>
+                Akzo Nobel
               </td>
               <td>2324.65</td>
               <td>6.56</td>
-              <td className="">
-                <div>
-                <input type="text" className="form-control w-25" />  
-                </div>
+              <td>
+                15
               </td>
               <td>
-              <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Buy</option>
-                    <option selected value="2">Sell</option>
-                  </select>
-              </div>
+                Sell
               </td>
             </tr>
 
@@ -242,32 +150,15 @@ const Basket = () => {
             <tr>
             <th scope="row">7</th>
               <td>
-                <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Asian Paints Ltd</option>
-                    <option value="2">Reliance Industries Ltd</option>
-                    <option value="3">La Opala RG Ltd</option>
-                    <option value="4">Reddington India Ltd</option>
-                    <option value="5">Indigo Paints</option>
-                    <option value="6">Akzo Nobel</option>
-                    <option selected value="7">BPL limited</option>
-                  </select>
-                </div>
+                BPL limited
               </td>
               <td>59.70</td>
               <td>24.3</td>
-              <td className="">
-                <div>
-                <input type="text" className="form-control w-25" />  
-                </div>
+              <td>
+                40
               </td>
               <td>
-              <div className="dropdown">
-                  <select className="form-select w-75 fs-6">
-                    <option value="1">Buy</option>
-                    <option value="2">Sell</option>
-                  </select>
-              </div>
+                Buy
               </td>
             </tr>
           </tbody>
@@ -276,7 +167,14 @@ const Basket = () => {
 
       <div className="d-flex align-items-center ">
           <h4>Total Investment:</h4>
-          <h4 className=" ms-3">9117</h4>
+          <h4 className=" ms-3">
+            <input class="form-control w-50 fw-semibold" type="text" value="2,91,052.5" aria-label="Disabled input example" disabled readonly />
+          </h4>
+      </div>
+
+      <div className="d-flex justify-content-between">
+        <Link href="/admin/customerDetails"><button type="button" class="btn btn-outline-primary btn-lg mb-5">Back</button></Link>
+        <button type="button" class="btn btn-success btn-lg float-end mb-5">Send as Weblink</button>
       </div>
     </div>)
 

@@ -10,18 +10,20 @@ const CustomerDetails = () => {
             <h3>Customer Details</h3>
 
             {/* Customer Details table */}
-            <table className="table table-hover table-bordered border-dark fs-5 mt-5">
+            <table className="table table-hover table-bordered border-dark fs-6 mt-5">
                 <thead>
                     <tr>
+                        <th>#</th>
                         <th>Firstname</th>
                         <th>Lastname</th>
                         <th>Email</th>
                         <th>Contact</th>
-                        <th></th>
+                        <th>Map</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>1</td>
                         <td>Vinod</td>
                         <td>Kumar</td>
                         <td>vinod12@gmail.com</td>
@@ -33,6 +35,7 @@ const CustomerDetails = () => {
                         </td>
                     </tr>
                     <tr>
+                        <td>2</td>
                         <td>Meera</td>
                         <td>Velu</td>
                         <td>meera@gmail.com</td>
@@ -44,6 +47,7 @@ const CustomerDetails = () => {
                         </td>
                     </tr>
                     <tr>
+                        <td>3</td>
                         <td>Veera</td>
                         <td>Vel</td>
                         <td>veeragg@gmail.com</td>
@@ -55,6 +59,7 @@ const CustomerDetails = () => {
                         </td>
                     </tr>
                     <tr>
+                        <td>4</td>
                         <td>Shriram</td>
                         <td>Kumar</td>
                         <td>shrirams@gmail.com</td>
@@ -66,6 +71,7 @@ const CustomerDetails = () => {
                         </td>
                     </tr>
                     <tr>
+                        <td>6</td>
                         <td>Kumar</td>
                         <td>Vel</td>
                         <td>kumarvv@gmail.com</td>
@@ -77,6 +83,7 @@ const CustomerDetails = () => {
                         </td>
                     </tr>
                     <tr>
+                        <td>7</td>
                         <td>Baskar</td>
                         <td>Shiva</td>
                         <td>baskivek@gmail.com</td>
@@ -110,7 +117,7 @@ const CustomerDetails = () => {
                 </ul>
             </nav>
 
-            <Link href='./dashboard' className="float-end"><button className="btn btn-primary btn-lg">Back to Dashboard</button></Link>
+            <Link href='./createBasket' className="float-end"><button className="btn btn-primary btn-lg">Back</button></Link>
         
         </div>)
         : (<div className="d-flex row container m-5">

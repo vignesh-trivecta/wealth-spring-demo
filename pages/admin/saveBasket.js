@@ -16,14 +16,14 @@ const SaveBasket = () => {
     loggedIn ?
     (<div className="container my-4">
       <h4 className='fw-bold'>Save your Basket</h4>
-      <div className='fs-5 mb-3'>
-        <label>Enter the name for Basket: &nbsp;</label>
-        <input type="text" />
+      <div className='d-flex text-nowrap align-items-center fs-5 mb-3 w-50'>
+        <label>Basket Name: &nbsp;</label>
+        <input type="text" className='form-control' placeholder='Enter bakset name' />
       </div> 
-      <div className='d-flex'>
-        <Link href='./dashboard' className="float-end"><button className="btn btn-outline-primary btn-lg">Back to Dashboard</button></Link>
-        <div className='ms-5'>
-        <button type="button" className="btn btn-success btn-lg ms-5" onClick={handleClick}>
+      <div className='d-flex justify-content-between w-50'>
+        <Link href='./createBasket' className="float-end"><button className="btn btn-outline-primary btn-lg">Back</button></Link>
+        <div className=''>
+        <button type="button" className="btn btn-success btn-lg" onClick={handleClick}>
           Save
         </button>
         </div>  

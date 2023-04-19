@@ -13,7 +13,7 @@ const CreateBasket = () => {
       <h3 className="text-center m-3 fw-bold">Create Basket</h3>
 
       {/* Investment row */}
-      <h4 className="">Investment</h4>
+      <h4>Investment</h4>
       <div className="d-flex justify-content-between mb-5">
         <div className="input-group w-50 me-5">
           <span className="input-group-text" id="inputGroup-sizing-default">Enter Investment Amount</span>
@@ -43,9 +43,9 @@ const CreateBasket = () => {
             <tr>
               <th scope="col">#</th>
               <th scope="col">Constituents</th>
-              <th scope="col">Current Price &#8377;</th>
-              <th scope="col">Weights %</th>
-              <th scope="col">Quantity</th>
+              <th scope="col" style={{width: '15%'}}>Current Price &#8377;</th>
+              <th scope="col" style={{width: '15%'}}>Weights %</th>
+              <th scope="col" style={{width: '10%'}}>Quantity</th>
               <th scope="col">Order Type</th>
             </tr>
           </thead>
@@ -55,7 +55,7 @@ const CreateBasket = () => {
             <tr>
               <th scope="row">1</th>
               <td>
-                <div className="dropdown">
+                <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Asian Paints Ltd</option>
                     <option value="2">Reliance Industries Ltd</option>
@@ -66,13 +66,13 @@ const CreateBasket = () => {
               </td>
               <td>2828.40</td>
               <td>12.34</td>
-              <td className="">
+              <td>
                 <div>
-                <input type="text" className="form-control w-25" />  
+                <input type="text" className="form-control w-75" />  
                 </div>
               </td>
               <td>
-              <div className="dropdown">
+              <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Buy</option>
                     <option value="2">Sell</option>
@@ -85,7 +85,7 @@ const CreateBasket = () => {
             <tr>
             <th scope="row">2</th>
               <td>
-                <div className="dropdown">
+                <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Asian Paints Ltd</option>
                     <option selected value="2">Reliance Industries Ltd</option>
@@ -96,13 +96,13 @@ const CreateBasket = () => {
               </td>
               <td>2356.35</td>
               <td>6.80</td>
-              <td className="">
+              <td>
                 <div>
-                <input type="text" className="form-control w-25" />  
+                <input type="text" className="form-control w-75" />  
                 </div>
               </td>
               <td>
-              <div className="dropdown">
+              <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Buy</option>
                     <option selected value="2">Sell</option>
@@ -115,7 +115,7 @@ const CreateBasket = () => {
             <tr>
             <th scope="row">3</th>
               <td>
-                <div className="dropdown">
+                <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Asian Paints Ltd</option>
                     <option value="2">Reliance Industries Ltd</option>
@@ -126,13 +126,13 @@ const CreateBasket = () => {
               </td>
               <td>365.20</td>
               <td>32.7</td>
-              <td className="">
+              <td>
                 <div>
-                <input type="text" className="form-control w-25" />  
+                <input type="text" className="form-control w-75" />  
                 </div>
               </td>
               <td>
-              <div className="dropdown">
+              <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Buy</option>
                     <option value="2">Sell</option>
@@ -145,7 +145,7 @@ const CreateBasket = () => {
             <tr>
             <th scope="row">4</th>
               <td>
-                <div className="dropdown">
+                <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Asian Paints Ltd</option>
                     <option value="2">Reliance Industries Ltd</option>
@@ -156,13 +156,13 @@ const CreateBasket = () => {
               </td>
               <td>170.00</td>
               <td>32.7</td>
-              <td className="">
+              <td>
                 <div>
-                <input type="text" className="form-control w-25" />  
+                <input type="text" className="form-control w-75" />  
                 </div>
               </td>
               <td>
-              <div className="dropdown">
+              <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Buy</option>
                     <option value="2">Sell</option>
@@ -175,7 +175,7 @@ const CreateBasket = () => {
             <tr>
             <th scope="row">5</th>
               <td>
-                <div className="dropdown">
+                <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Asian Paints Ltd</option>
                     <option value="2">Reliance Industries Ltd</option>
@@ -187,13 +187,13 @@ const CreateBasket = () => {
               </td>
               <td>1072.85</td>
               <td>7.51</td>
-              <td className="">
+              <td>
                 <div>
-                <input type="text" className="form-control w-25" />  
+                <input type="text" className="form-control w-75" />  
                 </div>
               </td>
               <td>
-              <div className="dropdown">
+              <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Buy</option>
                     <option selected value="2">Sell</option>
@@ -206,7 +206,7 @@ const CreateBasket = () => {
             <tr>
             <th scope="row">6</th>
               <td>
-                <div className="dropdown">
+                <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Asian Paints Ltd</option>
                     <option value="2">Reliance Industries Ltd</option>
@@ -219,13 +219,13 @@ const CreateBasket = () => {
               </td>
               <td>2324.65</td>
               <td>6.56</td>
-              <td className="">
+              <td>
                 <div>
-                <input type="text" className="form-control w-25" />  
+                <input type="text" className="form-control w-75" />  
                 </div>
               </td>
               <td>
-              <div className="dropdown">
+              <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Buy</option>
                     <option selected value="2">Sell</option>
@@ -238,7 +238,7 @@ const CreateBasket = () => {
             <tr>
             <th scope="row">7</th>
               <td>
-                <div className="dropdown">
+                <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Asian Paints Ltd</option>
                     <option value="2">Reliance Industries Ltd</option>
@@ -252,13 +252,13 @@ const CreateBasket = () => {
               </td>
               <td>59.70</td>
               <td>24.3</td>
-              <td className="">
+              <td>
                 <div>
-                <input type="text" className="form-control w-25" />  
+                <input type="text" className="form-control w-75" />  
                 </div>
               </td>
               <td>
-              <div className="dropdown">
+              <div>
                   <select className="form-select w-75 fs-6">
                     <option value="1">Buy</option>
                     <option value="2">Sell</option>
@@ -272,7 +272,9 @@ const CreateBasket = () => {
 
       <div className="d-flex align-items-center ">
           <h4>Total Investment:</h4>
-          <h4 className=" ms-3">9117</h4>
+          <h4 className=" ms-3">
+            <input class="form-control w-50 fw-semibold" type="text" value="" aria-label="Disabled input example" disabled readonly />
+          </h4>
       </div>
 
       {/* Button group */}
