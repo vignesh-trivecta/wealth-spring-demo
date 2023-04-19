@@ -46,7 +46,7 @@ const Dashboard = () => {
       {/* Dashboard */}
       <div className="">
         <div className="d-flex justify-content-between">
-          <h1 className="">Dashboard Overview</h1>
+          <h2 className="fw-bold">Dashboard Overview</h2>
           <div className="d-flex justify-content-between">
             <div className="fs-5">
               <p>Date: {new Date().toLocaleDateString()}</p>
@@ -63,19 +63,19 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="p-5">
-          <table className="table-borderless mx-auto">
+          <table className="table table-bordered border-dark">
             <tbody className="fs-3">
               <tr>
                 <td>Total Number of Customer Transaction</td>
-                <td className="border border-dark p-2">100</td>
+                <td>100</td>
               </tr>
               <tr>
-                <td className="pe-4">Total Number of Customer Orders Executed</td>
-                <td className="border border-dark p-2">110</td>
+                <td>Total Number of Customer Orders Executed</td>
+                <td>110</td>
               </tr>
               <tr>
                 <td>Total Value of Orders</td>
-                <td className="border border-dark p-2">200000</td>
+                <td>200000</td>
               </tr>
             </tbody>
           </table>

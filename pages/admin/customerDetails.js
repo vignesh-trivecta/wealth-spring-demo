@@ -10,7 +10,7 @@ const CustomerDetails = () => {
             <h1>Customer Details</h1>
 
             {/* Customer Details table */}
-            <table className="table">
+            <table className="table table-hover table-bordered border-dark fs-3 mt-5">
                 <thead>
                     <tr>
                         <th>Firstname</th>
@@ -66,7 +66,7 @@ const CustomerDetails = () => {
                 </tbody>
             </table>
 
-            <Link href='./dashboard' className="float-end"><button className="btn btn-primary">Back to Dashboard</button></Link>
+            <Link href='./dashboard' className="float-end"><button className="btn btn-primary btn-lg">Back to Dashboard</button></Link>
         
         </div>)
         : (<div className="d-flex row container m-5">

@@ -38,17 +38,19 @@ const CreateBasket = () => {
         <table className="table table-hover table-bordered border-dark fs-5">
           <thead>
             <tr>
-              <th>Constituents</th>
-              <th>Current Price &#8377;</th>
-              <th>Weights %</th>
-              <th>Quantity</th>
-              <th>Order Type</th>
+              <th scope="col">#</th>
+              <th scope="col">Constituents</th>
+              <th scope="col">Current Price &#8377;</th>
+              <th scope="col">Weights %</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Order Type</th>
             </tr>
           </thead>
           <tbody>
 
             {/* table 1 */}
             <tr>
+              <th scope="row">1</th>
               <td>
                 <div className="dropdown">
                   <select class="form-select w-75 fs-5">
@@ -61,8 +63,10 @@ const CreateBasket = () => {
               </td>
               <td>2765.40</td>
               <td>12.34</td>
-              <td>
-              <input type="text" class="form-control w-25" />  
+              <td className="">
+                <div>
+                <input type="text" class="form-control w-25" />  
+                </div>
               </td>
               <td>
               <div className="dropdown">
@@ -76,24 +80,27 @@ const CreateBasket = () => {
 
             {/* table 2 */}
             <tr>
+            <th scope="row">2</th>
               <td>
                 <div className="dropdown">
-                  <select>
+                  <select class="form-select w-75 fs-5">
                     <option value="1">Asian Paints Ltd</option>
                     <option value="2">Reliance Industries Ltd</option>
                     <option value="3">La Opala RG Ltd</option>
-                    <option value="4">Reddington India Ltd</option>
-                    <option value="5">BPL Limited</option>
-                    <option value="6">Surana Solar Limited</option>
+                    <option value="3">Reddington India Ltd</option>
                   </select>
                 </div>
               </td>
               <td>2765.40</td>
               <td>12.34</td>
-              <td><input type='text' /></td>
+              <td className="">
+                <div>
+                <input type="text" class="form-control w-25" />  
+                </div>
+              </td>
               <td>
               <div className="dropdown">
-                  <select>
+                  <select className="form-select w-75 fs-5">
                     <option value="1">Buy</option>
                     <option value="2">Sell</option>
                   </select>
@@ -103,51 +110,27 @@ const CreateBasket = () => {
 
             {/* table 3 */}
             <tr>
+            <th scope="row">3</th>
               <td>
                 <div className="dropdown">
-                  <select>
+                  <select class="form-select w-75 fs-5">
                     <option value="1">Asian Paints Ltd</option>
                     <option value="2">Reliance Industries Ltd</option>
                     <option value="3">La Opala RG Ltd</option>
-                    <option value="4">Reddington India Ltd</option>
-                    <option value="5">BPL Limited</option>
-                    <option value="6">Surana Solar Limited</option>
+                    <option value="3">Reddington India Ltd</option>
                   </select>
                 </div>
               </td>
               <td>2765.40</td>
               <td>12.34</td>
-              <td><input type='text' /></td>
-              <td>
-              <div className="dropdown">
-                  <select>
-                    <option value="1">Buy</option>
-                    <option value="2">Sell</option>
-                  </select>
-              </div>
-              </td>
-            </tr>
-
-            {/* table 3 */}
-            <tr>
-              <td>
-                <div className="dropdown">
-                  <select>
-                    <option value="1">Asian Paints Ltd</option>
-                    <option value="2">Reliance Industries Ltd</option>
-                    <option value="3">La Opala RG Ltd</option>
-                    <option value="4">Reddington India Ltd</option>
-                    <option value="5">BPL Limited</option>
-                    <option value="6">Surana Solar Limited</option>
-                  </select>
+              <td className="">
+                <div>
+                <input type="text" class="form-control w-25" />  
                 </div>
               </td>
-              <td>2765.40</td>
-              <td>12.34</td>
-              <td><input type='text' /></td>
               <td>
               <div className="dropdown">
-                  <select>
+                  <select className="form-select w-75 fs-5">
                     <option value="1">Buy</option>
                     <option value="2">Sell</option>
                   </select>
@@ -157,24 +140,27 @@ const CreateBasket = () => {
 
             {/* table 4 */}
             <tr>
+            <th scope="row">4</th>
               <td>
                 <div className="dropdown">
-                  <select>
+                  <select class="form-select w-75 fs-5">
                     <option value="1">Asian Paints Ltd</option>
                     <option value="2">Reliance Industries Ltd</option>
                     <option value="3">La Opala RG Ltd</option>
-                    <option value="4">Reddington India Ltd</option>
-                    <option value="5">BPL Limited</option>
-                    <option value="6">Surana Solar Limited</option>
+                    <option value="3">Reddington India Ltd</option>
                   </select>
                 </div>
               </td>
               <td>2765.40</td>
               <td>12.34</td>
-              <td><input type='text' /></td>
+              <td className="">
+                <div>
+                <input type="text" class="form-control w-25" />  
+                </div>
+              </td>
               <td>
               <div className="dropdown">
-                  <select>
+                  <select className="form-select w-75 fs-5">
                     <option value="1">Buy</option>
                     <option value="2">Sell</option>
                   </select>
@@ -184,24 +170,27 @@ const CreateBasket = () => {
 
             {/* table 5 */}
             <tr>
+            <th scope="row">5</th>
               <td>
                 <div className="dropdown">
-                  <select>
+                  <select class="form-select w-75 fs-5">
                     <option value="1">Asian Paints Ltd</option>
                     <option value="2">Reliance Industries Ltd</option>
                     <option value="3">La Opala RG Ltd</option>
-                    <option value="4">Reddington India Ltd</option>
-                    <option value="5">BPL Limited</option>
-                    <option value="6">Surana Solar Limited</option>
+                    <option value="3">Reddington India Ltd</option>
                   </select>
                 </div>
               </td>
               <td>2765.40</td>
               <td>12.34</td>
-              <td><input type='text' /></td>
+              <td className="">
+                <div>
+                <input type="text" class="form-control w-25" />  
+                </div>
+              </td>
               <td>
               <div className="dropdown">
-                  <select>
+                  <select className="form-select w-75 fs-5">
                     <option value="1">Buy</option>
                     <option value="2">Sell</option>
                   </select>
@@ -211,24 +200,57 @@ const CreateBasket = () => {
 
             {/* table 6 */}
             <tr>
+            <th scope="row">6</th>
               <td>
                 <div className="dropdown">
-                  <select>
+                  <select class="form-select w-75 fs-5">
                     <option value="1">Asian Paints Ltd</option>
                     <option value="2">Reliance Industries Ltd</option>
                     <option value="3">La Opala RG Ltd</option>
-                    <option value="4">Reddington India Ltd</option>
-                    <option value="5">BPL Limited</option>
-                    <option value="6">Surana Solar Limited</option>
+                    <option value="3">Reddington India Ltd</option>
                   </select>
                 </div>
               </td>
               <td>2765.40</td>
               <td>12.34</td>
-              <td><input type='text' /></td>
+              <td className="">
+                <div>
+                <input type="text" class="form-control w-25" />  
+                </div>
+              </td>
               <td>
               <div className="dropdown">
-                  <select>
+                  <select className="form-select w-75 fs-5">
+                    <option value="1">Buy</option>
+                    <option value="2">Sell</option>
+                  </select>
+              </div>
+              </td>
+            </tr>
+
+            {/* table 7 */}
+            <tr>
+            <th scope="row">7</th>
+              <td>
+                <div className="dropdown">
+                  <select class="form-select w-75 fs-5">
+                    <option value="1">Asian Paints Ltd</option>
+                    <option value="2">Reliance Industries Ltd</option>
+                    <option value="3">La Opala RG Ltd</option>
+                    <option value="3">Reddington India Ltd</option>
+                  </select>
+                </div>
+              </td>
+              <td>2765.40</td>
+              <td>12.34</td>
+              <td className="">
+                <div>
+                <input type="text" class="form-control w-25" />  
+                </div>
+              </td>
+              <td>
+              <div className="dropdown">
+                  <select className="form-select w-75 fs-5">
                     <option value="1">Buy</option>
                     <option value="2">Sell</option>
                   </select>
@@ -249,7 +271,9 @@ const CreateBasket = () => {
         <Link href='./saveBasket'>
           <button className="mx-2 btn btn-success btn-lg">Save</button>
         </Link>
-        <button className="mx-2 btn btn-primary btn-lg">Map to Customer</button>
+        <Link href="./customerDetails">
+          <button className="mx-2 btn btn-primary btn-lg">Map to Customer</button>
+        </Link>
       </div>
       
       <Link href='./dashboard' className="float-end"><button className="btn btn-outline-primary btn-lg">Back to Dashboard</button></Link>
