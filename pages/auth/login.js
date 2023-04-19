@@ -36,14 +36,15 @@ const LoginAuth = () => {
         // using jwt to create a authentication token
         // const { encryptedUser, encryptedPassword } = encryptedCredentials(user, password, process.env.SECRET_KEY);
         const token = jwt.sign({user, password}, process.env.SECRET_KEY);
-        // localStorage.setItem('loggedIn', true);
-        // dispatch(setLoggedIn(true));
-        // router.push('../admin/dashboard');
-        if(user == 'admin12' && password == 'admin12'){
-          localStorage.setItem('loggedIn', true);
-          dispatch(setLoggedIn(true));
-          router.push('../admin/dashboard');
-        }
+        localStorage.setItem('loggedIn', true);
+        dispatch(setLoggedIn(true));
+        router.push('../admin/dashboard');
+        
+        // if(user == 'admin12' && password == 'admin12'){
+        //   localStorage.setItem('loggedIn', true);
+        //   dispatch(setLoggedIn(true));
+        //   router.push('../admin/dashboard');
+        // }
 
         // posting the authorized token to backend,
         // based on the received respone 200 or 404 
