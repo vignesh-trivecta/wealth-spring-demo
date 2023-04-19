@@ -9,14 +9,14 @@ const SaveBasket = () => {
 
   const handleClick = () => {
     alert('Basket created successfully!');
-    router.push('/admin/dashboard');
+    router.push('/admin/createBasket');
     };
 
   return (
     loggedIn ?
     (<div className="container my-4">
-      <h2 className='fw-bold'>Save your Basket</h2>
-      <div className='fs-4 mb-3'>
+      <h4 className='fw-bold'>Save your Basket</h4>
+      <div className='fs-5 mb-3'>
         <label>Enter the name for Basket: &nbsp;</label>
         <input type="text" />
       </div> 

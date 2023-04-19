@@ -46,7 +46,7 @@ const Dashboard = () => {
       {/* Dashboard */}
       <div className="">
         <div className="d-flex justify-content-between">
-          <h2 className="fw-bold">Dashboard Overview</h2>
+          <h3 className="fw-bold">Dashboard Overview</h3>
           <div className="d-flex justify-content-between">
             <div className="fs-5">
               <p>Date: {new Date().toLocaleDateString()}</p>
@@ -62,9 +62,9 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="p-5">
+        <div className="mt-5">
           <table className="table table-bordered border-dark">
-            <tbody className="fs-3">
+            <tbody className="fs-5 fw-semibold">
               <tr>
                 <td>Total Number of Customer Transaction</td>
                 <td>100</td>

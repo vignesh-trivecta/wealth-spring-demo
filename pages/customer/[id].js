@@ -1,16 +1,20 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 
-const CreateBasket = () => {
+const Basket = () => {
 
   const loggedIn = useSelector((state) => state.auth.loggedIn);
+  const router = useRouter();
+  const { id } = router.query;
+
 
   return (
     loggedIn 
     ? (<div className="container">
 
       {/* User Basket */}
-      <h3 className="text-center m-3 fw-bold">Create Basket</h3>
+      <h3 className="text-center m-3 fw-bold">{id}'s Basket</h3>
 
       {/* Investment row */}
       <h4 className="">Investment</h4>
@@ -274,18 +278,6 @@ const CreateBasket = () => {
           <h4>Total Investment:</h4>
           <h4 className=" ms-3">9117</h4>
       </div>
-
-      {/* Button group */}
-      <div className="d-flex justify-content-center align-items-center">
-        <Link href='./saveBasket'>
-          <button className="mx-2 btn btn-success btn-lg">Save</button>
-        </Link>
-        <Link href="./customerDetails">
-          <button className="mx-2 btn btn-primary btn-lg">Map to Customer</button>
-        </Link>
-      </div>
-      
-      <Link href='./dashboard' className="float-end mb-3"><button className="btn btn-outline-primary btn-lg">Back to Dashboard</button></Link>
     </div>)
 
     : (<div className="d-flex row container m-5">
@@ -296,4 +288,4 @@ const CreateBasket = () => {
   );
 };
 
-export default CreateBasket;
+export default Basket;
