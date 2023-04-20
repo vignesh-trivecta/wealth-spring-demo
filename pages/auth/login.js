@@ -118,7 +118,7 @@ const LoginAuth = () => {
 
         {/* Login page */}
         <div className="d-flex justify-content-center align-items-center">
-        <form className="border border-dark rounded p-5 w-50">
+        <form className="border border-dark rounded p-5">
           <h3 className="text-center fw-bold">Login to Wealth Spring</h3>
           <div className="mb-3">
             <label for="exampleInputEmail1" className="form-label fs-5 fw-semibold">
