@@ -119,7 +119,7 @@ const LoginAuth = () => {
         {/* Login page */}
         <div className="d-flex justify-content-center align-items-center">
           <form className="border border-dark rounded p-5">
-            <h3 className="text-center fw-bold">Login to Wealth Spring</h3>
+            <h3 className="text-center fw-bold mb-4">Login to Wealth Spring</h3>
             <div className="mb-3">
               <label
                 for="exampleInputEmail1"
@@ -173,16 +173,16 @@ const LoginAuth = () => {
               />
             </div>
             <a href="#">Forgot your password?</a>
-            <div className="row">
+            <div className="row mt-3">
               <button
-                className="col btn btn-primary btn-lg m-4"
+                className="col btn btn-primary btn-lg m-2"
                 type="submit"
                 onClick={submitLogin}
               >
                 Login
               </button>
               <button
-                className="col btn btn-outline-danger btn-lg m-4"
+                className="col btn btn-outline-danger btn-lg m-2"
                 type="submit"
                 onClick={resetInput}
               >
