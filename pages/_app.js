@@ -1,4 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.css'; 
+import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 import '@/styles/globals.css';
 // import UserContext from '@/contexts/useUserContext';
 import { Provider } from 'react-redux';
