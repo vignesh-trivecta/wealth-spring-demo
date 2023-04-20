@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useSelector } from "react-redux";
 import Link from 'next/link';
+import Header from '../header';
 
 const SaveBasket = () => {
     
@@ -15,6 +16,8 @@ const SaveBasket = () => {
   return (
     loggedIn ?
     (<div className="container my-4">
+
+      <Header />
       <h4 className='fw-bold'>Save your Basket</h4>
       <div className='d-flex text-nowrap align-items-center fs-5 mb-3 w-50'>
         <label>Basket Name: &nbsp;</label>

@@ -112,10 +112,6 @@ const LoginAuth = () => {
           />
         </Head>
 
-        <p>
-          <Link href="/">{`<Home`}</Link>
-        </p>
-
         {/* Login page */}
         <div className="d-flex justify-content-center align-items-center">
           <form className="border border-dark rounded p-5">
@@ -152,7 +148,7 @@ const LoginAuth = () => {
               </label>
               <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">
-                  <i class="bi bi-lock-fill"></i>
+                  <i class="bi bi-eye-slash-fill"></i>
                 </span>
                 <input
                   className="form-control"
@@ -175,7 +171,7 @@ const LoginAuth = () => {
             <a href="#">Forgot your password?</a>
             <div className="row mt-3">
               <button
-                className="col btn btn-primary btn-lg m-2"
+                className="col btn btn-success btn-lg m-2"
                 type="submit"
                 onClick={submitLogin}
               >

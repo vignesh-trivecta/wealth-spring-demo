@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
+import Header from "../header";
 
 const Basket = () => {
 
@@ -12,6 +13,8 @@ const Basket = () => {
   return (
     loggedIn 
     ? (<div className="container">
+
+      <Header />
 
       {/* User Basket */}
       <h3 className="text-center m-3 fw-bold">{id}'s Basket</h3>

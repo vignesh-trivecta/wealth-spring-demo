@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useSelector } from "react-redux";
+import Header from "../header";
 
 const CustomerDetails = () => {
 
@@ -7,6 +8,9 @@ const CustomerDetails = () => {
 
     return(
         loggedIn ? (<div className="container">
+
+            <Header />
+
             <h3>Customer Details</h3>
 
             {/* Customer Details table */}
@@ -18,7 +22,7 @@ const CustomerDetails = () => {
                         <th>Lastname</th>
                         <th>Email</th>
                         <th>Contact</th>
-                        <th>Map</th>
+                        <th>Basket</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,9 +32,9 @@ const CustomerDetails = () => {
                         <td>Kumar</td>
                         <td>vinod12@gmail.com</td>
                         <td>9876543210</td>
-                        <td>
+                        <td className="text-center">
                             <Link href="/customer/Vinod">
-                                <button className="btn btn-outline-primary">Create</button>
+                                <button className="btn btn-outline-primary">+</button>
                             </Link>
                         </td>
                     </tr>
@@ -40,9 +44,9 @@ const CustomerDetails = () => {
                         <td>Velu</td>
                         <td>meera@gmail.com</td>
                         <td>9856326985</td>
-                        <td>
+                        <td className="text-center">
                             <Link href="/customer/Meera">
-                                <button className="btn btn-outline-primary">Create</button>
+                                <button className="btn btn-outline-primary">+</button>
                             </Link>
                         </td>
                     </tr>
@@ -52,9 +56,9 @@ const CustomerDetails = () => {
                         <td>Vel</td>
                         <td>veeragg@gmail.com</td>
                         <td>7964852348</td>
-                        <td>
+                        <td className="text-center">
                             <Link href="/customer/Veera">
-                                <button className="btn btn-outline-primary">Create</button>
+                                <button className="btn btn-outline-primary">+</button>
                             </Link>
                         </td>
                     </tr>
@@ -64,9 +68,9 @@ const CustomerDetails = () => {
                         <td>Kumar</td>
                         <td>shrirams@gmail.com</td>
                         <td>9856327981</td>
-                        <td>
+                        <td className="text-center">
                             <Link href="/customer/Shriram">
-                                <button className="btn btn-outline-primary">Create</button>
+                                <button className="btn btn-outline-primary">+</button>
                             </Link>
                         </td>
                     </tr>
@@ -76,9 +80,9 @@ const CustomerDetails = () => {
                         <td>Vel</td>
                         <td>kumarvv@gmail.com</td>
                         <td>8796579816</td>
-                        <td>
+                        <td className="text-center">
                             <Link href="/customer/Kumar">
-                                <button className="btn btn-outline-primary">Create</button>
+                                <button className="btn btn-outline-primary">+</button>
                             </Link>
                         </td>
                     </tr>
@@ -88,9 +92,9 @@ const CustomerDetails = () => {
                         <td>Shiva</td>
                         <td>baskivek@gmail.com</td>
                         <td>9742836754</td>
-                        <td>
+                        <td className="text-center">
                             <Link href="/customer/Baskar">
-                                <button className="btn btn-outline-primary">Create</button>
+                                <button className="btn btn-outline-primary">+</button>
                             </Link>
                         </td>
                     </tr>
@@ -117,7 +121,7 @@ const CustomerDetails = () => {
                 </ul>
             </nav>
 
-            <Link href='./createBasket' className="float-end"><button className="btn btn-primary btn-lg">Back</button></Link>
+            <Link href='./createBasket' className="float-end"><button className="btn btn-outline-primary btn-lg">Back</button></Link>
         
         </div>)
         : (<div className="d-flex row container m-5">

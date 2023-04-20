@@ -1,6 +1,7 @@
 import { setSelectedBasket } from "@/store/basketSlice";
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
+import Header from "../header";
 
 const CreateBasket = () => {
 
@@ -12,8 +13,10 @@ const CreateBasket = () => {
     loggedIn 
     ? (<div className="container">
 
+      <Header />
+
       {/* User Basket */}
-      <h3 className="text-center m-3 fw-bold">Create Basket</h3>
+      <h3 className="mb-4 fw-bold">Create Basket</h3>
 
       {/* Investment row */}
       <h4>Investment</h4>
@@ -290,7 +293,7 @@ const CreateBasket = () => {
         </Link>
       </div>
       
-      <Link href='./dashboard' className="float-end mb-3"><button className="btn btn-outline-primary btn-lg">Back to Dashboard</button></Link>
+      <Link href='./dashboard' className="float-end mb-3"><button className="btn btn-outline-primary btn-lg">Back</button></Link>
     </div>)
 
     : (<div className="d-flex row container m-5">
