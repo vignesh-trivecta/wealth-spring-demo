@@ -18,7 +18,6 @@ const Header = () => {
         dispatch(setLoggedIn(false));
         dispatch(setUser(''));
         dispatch(setPassword(''));
-        localStorage.setItem('loggedIn', false);
     }
 
     return(
