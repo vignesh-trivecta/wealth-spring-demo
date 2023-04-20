@@ -118,35 +118,53 @@ const LoginAuth = () => {
 
         {/* Login page */}
         <div className="d-flex justify-content-center align-items-center">
-        <form className="border border-dark rounded p-5">
-          <h3 className="text-center fw-bold">Login to Wealth Spring</h3>
-          <div className="mb-3">
-            <label for="exampleInputEmail1" className="form-label fs-5 fw-semibold">
-              Username
-            </label>
-            <input
-              type="text"
-              onChange={(e) => dispatch(setUser(e.target.value))}
-              value={user}
-              className="form-control border border-dark"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              sx={{width: '50px'}}
-            />
-          </div>
-          <div className="mb-3">
-            <label for="exampleInputPassword1" className="form-label fs-5 fw-semibold">
-              Password
-            </label>
-            <input
-              type="password"
-              onChange={(e) => dispatch(setPassword(e.target.value))}
-              value={password}
-              className="form-control border border-dark"
-              id="exampleInputPassword1"
-            />
-          </div>
-          <div className="d-flex">
+          <form className="border border-dark rounded p-5">
+            <h3 className="text-center fw-bold">Login to Wealth Spring</h3>
+            <div className="mb-3">
+              <label
+                for="exampleInputEmail1"
+                className="form-label fs-5 fw-semibold"
+              >
+                Username
+              </label>
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">
+                  <i class="bi bi-person-circle"></i>
+                </span>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter username"
+                  onChange={(e) => dispatch(setUser(e.target.value))}
+                  value={user}
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  sx={{ width: "50px" }}
+                />
+              </div>
+            </div>
+            <div className="mb-3">
+              <label
+                for="exampleInputPassword1"
+                className="form-label fs-5 fw-semibold"
+              >
+                Password
+              </label>
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">
+                  <i class="bi bi-lock-fill"></i>
+                </span>
+                <input
+                  className="form-control"
+                  placeholder="Enter password"
+                  type="password"
+                  onChange={(e) => dispatch(setPassword(e.target.value))}
+                  value={password}
+                  id="exampleInputPassword1"
+                />
+              </div>
+            </div>
+            <div className="d-flex">
               <ReCAPTCHA
                 ref={ReCAPTCHA}
                 size="normal"
@@ -171,7 +189,7 @@ const LoginAuth = () => {
                 Reset
               </button>
             </div>
-        </form>
+          </form>
         </div>
       </div>
     );
