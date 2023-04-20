@@ -174,7 +174,7 @@ const Basket = () => {
 
       <div className="d-flex justify-content-between">
         <Link href="/admin/customerDetails"><button type="button" class="btn btn-outline-primary btn-lg mb-5">Back</button></Link>
-        <button type="button" class="btn btn-success btn-lg float-end mb-5">Send as Weblink</button>
+        <button type="button" class="btn btn-success btn-lg float-end mb-5"><i class="bi bi-chat-text"> Send as Weblink</i></button>
       </div>
     </div>)
 
