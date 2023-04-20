@@ -1,15 +1,13 @@
 import Link from "next/link";
 import { useSelector } from "react-redux";
-import Header from "../header";
 
 const CustomerDetails = () => {
 
     const loggedIn = useSelector((state) => state.auth.loggedIn);
 
     return(
-        loggedIn ? (<div className="container">
-
-            <Header />
+        loggedIn ? (
+        <div className="container">
 
             <h3>Customer Details</h3>
 

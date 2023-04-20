@@ -6,19 +6,24 @@ import { Provider } from 'react-redux';
 import store from '../store/store';
 import { persistor } from '../store/store';
 import { PersistGate } from 'redux-persist/integration/react';
-
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Header from './components/header';
 
 function App({ Component, pageProps }) {
   useEffect(() => {
     import('bootstrap/dist/js/bootstrap');
   }, []);
 
+  const router = useRouter();
+  const showHeader = router.pathname === '/' ? false : true;
+
   return (
     // <UserContext>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-        <Component {...pageProps} />
+          {showHeader && <Header />}
+          <Component {...pageProps} />
         </PersistGate>
       </Provider>
     // </UserContext> 

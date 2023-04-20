@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import LoginAuth from './auth/login'
+import LoginAuth from './components/login'
 
 export default function Home() {
   return (

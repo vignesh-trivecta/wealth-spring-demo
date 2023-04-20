@@ -1,20 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
-import {useRouter} from "next/router";
-import { setLoggedIn } from "@/store/authSlice";
-import { useDispatch, useSelector } from "react-redux";
-import Clock from 'react-live-clock';
-import { setPassword, setUser } from "@/store/userSlice";
+import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { setData } from "@/store/dataSlice";
-import Header from "../header";
 
 const Dashboard = () => {
 
   const loggedIn = useSelector((state) => state.auth.loggedIn);
-  // const data = useSelector((state) => state.data.data);
-  const router = useRouter();
-  const dispatch = useDispatch();
 
   useEffect(()=> {
     async function getData () {
@@ -34,8 +26,6 @@ const Dashboard = () => {
         <title>Wealth Spring | Admin Dashboard</title>
         <meta property="og:title" content="Wealth Spring | Admin Dashboard" key="title" />
       </Head>
-
-      <Header />
 
       {/* Dashboard */}
       <div className="">
