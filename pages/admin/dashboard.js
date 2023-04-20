@@ -63,7 +63,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="mt-5">
-          <table className="table table-bordered border-dark">
+          <table className="table table-bordered table-hover border-dark">
             <tbody className="fs-5 fw-semibold">
               <tr>
                 <td>Total Number of Customer Transaction</td>
