@@ -22,25 +22,23 @@ const Header = () => {
     }
 
     return(
-        <div className="header d-flex justify-content-between p-2">
+        <div className="header d-flex justify-content-between px-2 pt-2">
             <h3>
                 Wealth Spring
             </h3>
-            <div className="">
-                <div className="d-flex">
-                    <div className="fs-6">
-                        <p>Date: {new Date().toLocaleDateString()}</p>
-                        <p>Time: <Clock format={'h:mm a'} ticking={true} timezone={'Asia/Calcutta'} /></p>
-                    </div>
+            <div className="d-flex">
+                <div className="fs-6">
+                    <p>Date: {new Date().toLocaleDateString()}</p>
+                    <p>Time: <Clock format={'h:mm a'} ticking={true} timezone={'Asia/Calcutta'} /></p>
+                </div>
 
-                    <div className="dropdown ms-4">
-                        <button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Admin
-                        </button>
-                        <ul className="dropdown-menu">
-                            <li><button className="dropdown-item" onClick={logOut}>Log out</button></li>
-                        </ul>
-                    </div>
+                <div className="dropdown ms-4">
+                    <button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admin
+                    </button>
+                    <ul className="dropdown-menu">
+                        <li><button className="dropdown-item" onClick={logOut}>Log out</button></li>
+                    </ul>
                 </div>
             </div>
         </div>

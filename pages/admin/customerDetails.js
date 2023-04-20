@@ -6,8 +6,7 @@ const CustomerDetails = () => {
     const loggedIn = useSelector((state) => state.auth.loggedIn);
 
     return(
-        loggedIn ? (
-        <div className="container">
+        loggedIn ? (<div className="container">
 
             <h3>Customer Details</h3>
 
@@ -20,7 +19,8 @@ const CustomerDetails = () => {
                         <th>Lastname</th>
                         <th>Email</th>
                         <th>Contact</th>
-                        <th>Basket</th>
+                        <th style={{width: '10%'}}>Basket No</th>
+                        <th style={{width: '5%'}}>Map</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,9 +30,10 @@ const CustomerDetails = () => {
                         <td>Kumar</td>
                         <td>vinod12@gmail.com</td>
                         <td>9876543210</td>
+                        <td><input type="text" className="form-control w-75" /></td>
                         <td className="text-center">
                             <Link href="/customer/Vinod">
-                                <button className="btn btn-outline-primary">+</button>
+                                <button className="btn btn-success">+</button>
                             </Link>
                         </td>
                     </tr>
@@ -42,9 +43,10 @@ const CustomerDetails = () => {
                         <td>Velu</td>
                         <td>meera@gmail.com</td>
                         <td>9856326985</td>
+                        <td><input type="text" className="form-control w-75" /></td>
                         <td className="text-center">
                             <Link href="/customer/Meera">
-                                <button className="btn btn-outline-primary">+</button>
+                                <button className="btn btn-success">+</button>
                             </Link>
                         </td>
                     </tr>
@@ -54,9 +56,10 @@ const CustomerDetails = () => {
                         <td>Vel</td>
                         <td>veeragg@gmail.com</td>
                         <td>7964852348</td>
+                        <td><input type="text" className="form-control w-75" /></td>
                         <td className="text-center">
                             <Link href="/customer/Veera">
-                                <button className="btn btn-outline-primary">+</button>
+                                <button className="btn btn-success">+</button>
                             </Link>
                         </td>
                     </tr>
@@ -66,9 +69,10 @@ const CustomerDetails = () => {
                         <td>Kumar</td>
                         <td>shrirams@gmail.com</td>
                         <td>9856327981</td>
+                        <td><input type="text" className="form-control w-75" /></td>
                         <td className="text-center">
                             <Link href="/customer/Shriram">
-                                <button className="btn btn-outline-primary">+</button>
+                                <button className="btn btn-success">+</button>
                             </Link>
                         </td>
                     </tr>
@@ -78,9 +82,10 @@ const CustomerDetails = () => {
                         <td>Vel</td>
                         <td>kumarvv@gmail.com</td>
                         <td>8796579816</td>
+                        <td><input type="text" className="form-control w-75" /></td>
                         <td className="text-center">
                             <Link href="/customer/Kumar">
-                                <button className="btn btn-outline-primary">+</button>
+                                <button className="btn btn-success">+</button>
                             </Link>
                         </td>
                     </tr>
@@ -90,9 +95,10 @@ const CustomerDetails = () => {
                         <td>Shiva</td>
                         <td>baskivek@gmail.com</td>
                         <td>9742836754</td>
+                        <td><input type="text" className="form-control w-75" /></td>
                         <td className="text-center">
                             <Link href="/customer/Baskar">
-                                <button className="btn btn-outline-primary">+</button>
+                                <button className="btn btn-success">+</button>
                             </Link>
                         </td>
                     </tr>

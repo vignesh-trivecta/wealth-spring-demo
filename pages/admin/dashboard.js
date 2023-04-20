@@ -34,6 +34,10 @@ const Dashboard = () => {
           <div className="d-flex justify-content-center">
             <table className="table table-bordered table-hover d-flex justify-content-center" style={{width: '50%'}}>
               <tbody className="fs-5 fw-semibold">
+                <tr className="bg-secondary bg-gradient">
+                  <td>#</td>
+                  <td>#</td>
+                </tr>
                 <tr>
                   <td>Total Number of Customer Transaction</td>
                   <td>115</td>
